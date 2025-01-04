@@ -1,0 +1,135 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+#Login {
+    width: 90%; /* Use a percentage to make it responsive */
+    max-width: 300px; /* Limit maximum width */
+    margin: 0 auto; /* Center the form */
+    border: 2px solid #00bcd4;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    text-align: center; /* Center the text */
+    margin-bottom: 16px; /* Space below the heading */
+    position: relative; /* Required for pseudo-element positioning */
+}
+
+h2::after {
+    content: ''; /* Adds the underline */
+    display: block;
+    width: 60%; /* Adjust width as needed */
+    height: 4px; /* Thickness of the line */
+    background-color: #00bcd4; /* Line color */
+    margin: 8px auto 0;
+    border-radius: 2px; /* Smooth the edges of the line */
+}
+
+.input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    font-size: 0.95rem;
+    padding: 0 15px;
+    border: 1px solid #717171;
+    border-radius: 3px;
+}
+
+.input-field input:focus {
+    border: 1px solid #00bcd4;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #4a4646;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    padding: 16px 15px 0;
+}
+
+.input-field input:is(:focus, :valid) ~ label {
+    transform: translateY(-120%);
+    color: #00bcd4;
+    font-size: 0.75rem;
+}
+
+form button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 25px 0;
+    background: #00bcd4;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background: #0097a7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Login {
+        width: 85%; /* Make form narrower */
+        padding: 15px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .input-field input {
+        font-size: 0.85rem; /* Adjust input font size */
+        padding: 0 10px;
+    }
+
+    form button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 12px 0; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    #Login {
+        width: 95%; /* Further narrow the form */
+        padding: 10px; /* Reduce padding further */
+    }
+
+    h2 {
+        font-size: 18px; /* Smaller heading size for phones */
+    }
+
+    .input-field input {
+        font-size: 0.8rem; /* Smaller input font size */
+    }
+
+    form button {
+        font-size: 0.85rem; /* Smaller button font size */
+        padding: 10px 0; /* Adjust button padding */
+    }
+}

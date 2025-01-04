@@ -1,0 +1,158 @@
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #008c9e;  /* Darker shade for better differentiation */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures navbar stays on top of other content */
+  margin-bottom: 40px;
+}
+
+.navbar-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.navbar-logo a:hover {
+  color: #00bcd4;  /* Matches homepage accent color */
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links li {
+  font-size: 1rem;
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  color: #00bcd4;  /* Matches homepage accent color */
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-login, .btn-signup {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-login {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-login:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-signup {
+  background-color: #00bcd4; /* Matching accent color */
+  color: #fff;
+}
+
+.btn-signup:hover {
+  background-color: #008c9e;  /* Slightly darker hover color */
+}
+
+/* Responsive Styles */
+
+/* Dropdown Toggle Button */
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-left: auto;
+}
+
+/* For Tablets and Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+  }
+
+  .navbar-logo a {
+      font-size: 1.5rem;
+  }
+
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      background-color: #008c9e; /* Matches navbar */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 999;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+
+  .navbar-actions {
+      display: none; /* Move actions into the dropdown for simplicity */
+  }
+
+  .navbar-toggle {
+      display: block;
+  }
+
+  .btn-login, .btn-signup {
+      width: 90%; /* Full-width buttons in dropdown */
+      text-align: center;
+  }
+}
+
+/* For Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .navbar-logo a {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+  }
+
+  .btn-login, .btn-signup {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+  }
+}
