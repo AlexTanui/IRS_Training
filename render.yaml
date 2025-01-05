@@ -5,14 +5,14 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: node server.js
-    branches:
-      - main
-    disk:
-      size: 1GB  # Ensure SQLite database is persistent
-      mountPath: /data  # Path where SQLite database will be stored
     envVars:
       - key: DATABASE_PATH
         value: '/data/user_db.db'  # Path to the SQLite database file in the persistent disk
       - key: JWT_SECRET
         value: 'your-jwt-secret-key'  # JWT secret key for signing tokens (should be kept private)
     healthCheckPath: /health
+
+persistent_disks:
+  - name: sqlite-disk
+    size: 1GB
+    mountPath: /data  # Path where SQLite database will be stored
