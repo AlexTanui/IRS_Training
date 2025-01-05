@@ -14,11 +14,12 @@ app.use(cors());  // Enable CORS for cross-origin requests
 app.use(bodyParser.json());  // Parse incoming JSON requests
 
 // SQLite Database Connection
-const db = new sqlite3.Database('./user_db.db', (err) => {
+const dbPath = process.env.DATABASE_PATH || './user_db.db';  // Use DATABASE_PATH from environment variables
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Error opening SQLite database:', err.message);
   } else {
-    console.log('Connected to SQLite database');
+    console.log('Connected to SQLite database at:', dbPath);
   }
 });
 
