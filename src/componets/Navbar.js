@@ -27,11 +27,11 @@ const Navbar = () => {
     <img 
       src="https://www.icon0.com/free/static2/preview2/stock-photo-tax-icon-sign-symbol-design-18128.jpg" 
       alt="Tax Icon" 
-      style={{ marginRight: '8px', height: '40px', width: '40px' }} 
+      style={{ marginRight: '8px', height: '38px', width: '38px' }} 
     />
     <span>MyTax Training</span>
   </Link>
-</div>
+</div> 
 
       <button className="navbar-toggle" onClick={handleToggleMenu}>
         ☰
