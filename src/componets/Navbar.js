@@ -23,8 +23,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">Your Logo</Link>
-      </div>
+  <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+    <img 
+      src="https://www.icon0.com/free/static2/preview2/stock-photo-tax-icon-sign-symbol-design-18128.jpg" 
+      alt="Tax Icon" 
+      style={{ marginRight: '8px', height: '40px', width: '40px' }} 
+    />
+    <span>MyTax Training</span>
+  </Link>
+</div>
+
       <button className="navbar-toggle" onClick={handleToggleMenu}>
         ☰
       </button>
