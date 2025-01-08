@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar-logo">
   <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
     <img 
-      src="https://www.icon0.com/free/static2/preview2/stock-photo-tax-icon-sign-symbol-design-18128.jpg" 
+      src="https://i.postimg.cc/c1bWL3Mf/tax-logo-edited.png" 
       alt="Tax Icon" 
       style={{ marginRight: '8px', height: '38px', width: '38px' }} 
     />
